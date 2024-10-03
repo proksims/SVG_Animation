@@ -1,0 +1,251 @@
+
+:root{
+  /* default */
+  --sky: linear-gradient(0.3turn, #FFD287, #FFD4FE);
+  --mountainBS: #f1bfa2;
+  --mountainBD:#be967e;
+  --mountainS1:  #E09C9C;
+  --mountainD1: #c58e8e;
+  --mountainS2:  #E09C9C;
+  --mountainD2: #b67e7e;
+  --mountainS3:  #E09C9C;
+  --mountainD3: #b67e7e;
+  --hill : #d69873;
+  --land: #C4918D;
+  --treeS :  #D89449;
+  --treeD :  #CE791C;
+  --trunks: #8C5F50;
+  --sun:#FFFFDA;
+  --river:#f1cfa3;
+  --river2:#e5dbee;
+  --cloud: #D4EBF9;
+  --snow:#ffffffb4;
+  --stars: #D1D7E5;
+}
+
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Inconsolata", monospace;
+  box-sizing: border-box;
+}
+
+html{
+  font-size: 16px;
+}
+
+body {
+padding: 0;
+margin: 0;
+display: flex;
+justify-content: center;
+align-items: center;
+width: 100vw;
+min-height: 100vh;
+background: rgb(250, 247, 241);
+font-size: 14px;
+}
+
+.container {
+text-align: center;
+}
+
+.label{
+margin-bottom: 10px;
+font-size: 1.2rem;
+font-weight: 800;
+  @media (max-width:555px) {
+    font-size: 1.2rem;      
+  }
+}
+
+.container_svg{
+  padding: 15px;
+  background: rgba(136, 134, 134, 0.212);
+  box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.15);
+}
+svg{
+  background: var(--sky);
+  @media (max-width:555px) {
+    width: 400px;
+    height: 280px;        
+  }
+  @media (max-width:450px) {
+    width: 290px;
+    height: 203px;        
+  }
+}
+.container_buttons{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 2.5rem;
+  line-height: 2.5rem;
+  margin-top: 10px;
+  border-radius: 5px;
+  background: rgba(250, 247, 241, 0.438);
+}
+
+button{
+  border: none;
+  background: none;
+  text-decoration: none;
+  transition: all 0.2s ease 0s;
+  cursor: pointer;
+  height: 2rem;
+  width: 70px;
+  font-size: 1rem;
+  &:hover{
+    color: rgb(104, 104, 104);
+    font-size: 1.1rem;
+  }
+  &:active{
+    font-size: 1rem;
+    color: rgb(104, 104, 104);
+  }
+  &:focus {
+    color: rgba(104, 104, 104, 0.685);
+    outline: none;
+  }
+}
+
+
+/* ============================ DRAW =================================== */
+.stars{
+  opacity: 0;
+}
+
+.sunrise{
+  --sky: linear-gradient(0.3turn, #FFD287, #FFD4FE);
+  --mountainBS: #f1bfa2;
+  --mountainBD:#be967e;
+  --mountainS1:  #E09C9C;
+  --mountainD1: #c58e8e;
+  --mountainS2:  #E09C9C;
+  --mountainD2: #b67e7e;
+  --mountainS3:  #E09C9C;
+  --mountainD3: #b67e7e;
+  --hill : #d69873;
+  --land: #C4918D;
+  --treeS :  #D89449;
+  --treeD :  #CE791C;
+  --trunks: #8C5F50;
+  --sun:#FFFFDA;
+  --river:#f1cfa3;
+  --river2:#e5dbee;
+  --snow:#ffffffc0;
+  .clouds{
+    transform:translate(500px, 0px);
+    transition: all 0.8s ease .3s;
+  }
+  #sun{
+    transform:translate(-40px, 50px);
+    transition: all 0.8s ease .3s;
+  }
+  .stars{
+    opacity: 0;
+    transition: all 1s ease .3s;
+  }
+}
+
+.day{
+  --sky: linear-gradient(#94d6d2, #3ABEE5);
+  --mountainBS: #70B6D1;
+  --mountainBD:#5F9DB1;
+  --mountainS1: #91C142;
+  --mountainD1:#7AA439;
+  --mountainS2: #91C142;
+  --mountainD2:#7AA539;
+  --mountainS3: #91C143;
+  --mountainD3:#7AA539;
+  --hill : #8BAB21;
+  --land: #E3E46C;
+  --treeS : #5E993C;
+  --treeD : #4F8433;
+  --trunks: #8C5F50;
+  --sun:#F7CD47;
+  --river:#3ABEE5;
+  --river2:#94d6d2;
+  --river:#64C4DA;
+  --cloud: #D4EBF9;
+  --snow:#ffffffb4;
+  .clouds{
+    transform:translate(0px, 0px);
+    transition: all 0.8s ease .3s;
+  }
+  #sun{
+    transform:translate(0px, 0px);
+    transition: all 0.8s ease .3s;
+  }
+  .stars{
+    opacity: 0;
+    transition: all 0.8s ease .3s;
+  }
+}
+
+.sunset{
+  --sky: linear-gradient(0.3turn, #FFC324, #F7FFA9);
+  --mountainBS: #ef9a2b;
+  --mountainBD:#c06f24;
+  --mountainS1: #e69a28;
+  --mountainD1:#ad741e;
+  --mountainS2: #e6a428;
+  --mountainD2:#bd9027;
+  --mountainS3: #E6AD28;
+  --mountainD3:#c59627;
+  --hill : #a07d1d;
+  --land: #ada64a;
+  --treeS :  #90963C;
+  --treeD :  #747C0B;
+  --trunks: #3F3E3D;
+  --sun:#FFFFFF;
+  --river: #F7FFA9;
+  --river2: #dfbe65;
+  --snow:#ffffffc7;
+  .clouds{
+    transform:translate(500px, 0px);
+    transition: all 0.8s ease .3s;
+  }
+  #sun{
+    transform:translate(220px, 20px);
+    transition: all 0.8s ease .3s;
+  }
+  .stars{
+    opacity: 0;
+    transition: all 0.8s ease .3s;
+  }
+}
+.night{
+  --sky: linear-gradient( #17377F, #041336);
+  --mountainBS: #34597a;
+  --mountainBD:#244766;
+  --mountainS1: #659FCD;
+  --mountainD1:#4879a1;
+  --mountainS2: #659FCD;
+  --mountainD2:#4e7ea5;
+  --mountainS3: #659FCD;
+  --mountainD3:#49769b;
+  --hill : #34597a;
+  --land: #508BB5;
+  --treeS :  #495662;
+  --treeD :  #1C2C3B;
+  --trunks:  #3F3E3D;
+  --sun:#D1D7E5;
+  --river: #17377F;
+  --river2: #041336;
+  --snow:#D1D7E5;
+  .clouds{
+    transform:translate(500px, 0px);
+    transition: all 1s ease .3s;
+  }
+  #sun{
+    transform:translate(400px, 300px);
+    transition: all 1s ease .3s;
+  }
+  .stars{
+    opacity: 1;
+    transition: all 5s ease .3s;
+  }
+}
+
